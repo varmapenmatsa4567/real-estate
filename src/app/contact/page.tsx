@@ -1,5 +1,9 @@
+"use client";
+
 import SectionTitle from "@/components/SectionTitle";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import { staggerContainer, staggerItem, fadeInUp, viewport } from "@/lib/animation-utils";
 
 export default function ContactPage() {
     return (
@@ -13,83 +17,113 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {/* Contact Form */}
-                    <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                    <motion.div
+                        className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-8"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={viewport}
+                        variants={fadeInUp}
+                    >
                         <h3 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <motion.form
+                            className="space-y-6"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={viewport}
+                            variants={staggerContainer}
+                        >
+                            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6" variants={staggerItem}>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         Your Name <span className="text-red-500">*</span>
                                     </label>
-                                    <input
+                                    <motion.input
                                         type="text"
                                         placeholder="John Doe"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20"
                                         required
+                                        whileFocus={{ scale: 1.01 }}
                                     />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         Email <span className="text-red-500">*</span>
                                     </label>
-                                    <input
+                                    <motion.input
                                         type="email"
                                         placeholder="john@example.com"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20"
                                         required
+                                        whileFocus={{ scale: 1.01 }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6" variants={staggerItem}>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         Phone <span className="text-red-500">*</span>
                                     </label>
-                                    <input
+                                    <motion.input
                                         type="tel"
                                         placeholder="+1 (555) 000-0000"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20"
                                         required
+                                        whileFocus={{ scale: 1.01 }}
                                     />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         Preferred Location
                                     </label>
-                                    <input
+                                    <motion.input
                                         type="text"
                                         placeholder="e.g., New York, Manhattan"
                                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20"
+                                        whileFocus={{ scale: 1.01 }}
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div>
+                            <motion.div variants={staggerItem}>
                                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     Message <span className="text-red-500">*</span>
                                 </label>
-                                <textarea
+                                <motion.textarea
                                     rows={6}
                                     placeholder="Tell us how we can help you..."
                                     className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20 resize-none"
                                     required
+                                    whileFocus={{ scale: 1.01 }}
                                 />
-                            </div>
+                            </motion.div>
 
-                            <button
+                            <motion.button
                                 type="submit"
                                 className="w-full bg-secondary hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                variants={staggerItem}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
                             >
                                 Send Message
-                            </button>
-                        </form>
-                    </div>
+                            </motion.button>
+                        </motion.form>
+                    </motion.div>
 
                     {/* Contact Information */}
-                    <div className="space-y-6">
+                    <motion.div
+                        className="space-y-6"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={viewport}
+                        variants={staggerContainer}
+                    >
                         {/* Office Info Card */}
-                        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                        <motion.div
+                            className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6"
+                            variants={staggerItem}
+                            whileHover={{ y: -5, transition: { duration: 0.3 } }}
+                        >
                             <h3 className="text-xl font-bold text-primary mb-6">Contact Information</h3>
 
                             <div className="space-y-6">
@@ -139,10 +173,14 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Map Placeholder */}
-                        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                        <motion.div
+                            className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6"
+                            variants={staggerItem}
+                            whileHover={{ y: -5, transition: { duration: 0.3 } }}
+                        >
                             <h3 className="text-xl font-bold text-primary mb-4">Our Office Location</h3>
                             <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
                                 <div className="text-center">
@@ -151,8 +189,8 @@ export default function ContactPage() {
                                     <p className="text-sm text-gray-400">123 Real Estate Ave</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
         </div>
