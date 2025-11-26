@@ -100,8 +100,8 @@ export default function ContactPage() {
                                     <div>
                                         <h4 className="font-semibold text-primary mb-1">Office Address</h4>
                                         <p className="text-gray-600 text-sm leading-relaxed">
-                                            123 Real Estate Ave, Suite 100<br />
-                                            New York, NY 10001
+                                            5618 TENTH LINE W UNIT 9<br />
+                                            MISSISSAUGA, Ontario L5M7L9
                                         </p>
                                     </div>
                                 </div>
@@ -112,8 +112,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-primary mb-1">Phone</h4>
-                                        <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
-                                        <p className="text-gray-600 text-sm">+1 (555) 987-6543</p>
+                                        <p className="text-gray-600 text-sm">+1 (416) 835-5068</p>
                                     </div>
                                 </div>
 

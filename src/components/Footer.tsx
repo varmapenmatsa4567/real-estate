@@ -16,16 +16,16 @@ export default function Footer() {
                             We help you find the perfect home. Whether you are buying, selling, or renting, we are here to support you every step of the way.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
+                            <a href="https://www.facebook.com/list2maxrealty/" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
+                            <a href="https://x.com/akhalik16?lang=en" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
                                 <Twitter size={20} />
                             </a>
                             <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
+                            <a href="https://www.linkedin.com/in/abdul-khalik-833279118/?trk=nav_responsive_tab_profile" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors">
                                 <Linkedin size={20} />
                             </a>
                         </div>
@@ -91,11 +91,11 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400">
                                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-1" />
-                                <span>123 Real Estate Ave, Suite 100<br />New York, NY 10001</span>
+                                <span>5618 TENTH LINE W UNIT 9<br />MISSISSAUGA, Ontario L5M7L9</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+1 (416) 835-5068</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-secondary shrink-0" />
