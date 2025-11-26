@@ -243,12 +243,12 @@ export default function AboutPage() {
                                     variants={staggerItem}
                                     whileHover={{ y: -10 }}
                                 >
-                                    <div className="relative h-96 rounded-2xl overflow-hidden mb-4 shadow-lg">
+                                    <div className="relative h-96 rounded-2xl overflow-hidden mb-4">
                                         <Image
                                             src={client.image}
                                             alt={client.name}
                                             fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                            className="object-contain group-hover:scale-110 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
